@@ -122,3 +122,10 @@ strong {
 em {
   font-style: italic;
 }
+
+blockquote {
+  border-left: 3px solid $whity-light-gray;
+  margin: 3.0rem 1.0rem;
+  padding-left: 1.0rem;
+  color: lighten($default-text-color, 20);
+}
