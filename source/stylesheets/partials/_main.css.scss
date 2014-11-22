@@ -1,0 +1,142 @@
+main {
+  width: 100%;
+  margin: 80px auto 80px auto;
+
+  @include breakpoint($content-body-width) {
+    width: $content-width;
+  }
+
+  article {
+    margin-bottom: 100px;
+    padding: 0 $content-body-padding;
+
+    .article-title {
+      text-align: center;
+      margin-top: 10.0rem;
+      margin-bottom: 5.0rem;
+    }
+
+    .tag-list {
+      list-style-type: none;
+    }
+
+    .tag-labels {
+      text-align: center;
+      margin-left: .7rem; // centering
+    }
+    
+    .tag-label {
+      @include border-radius(13px);
+      border: 0 none;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin-bottom: .8rem;
+      margin-right: .7rem;
+      padding: .4rem 1.2rem .5rem 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      background: darken($feather-gray, 4);
+
+      &:hover {
+    	background: $link-color;
+      }
+
+      a {
+        color: white;
+	width: 100%;
+      }
+    }
+
+    .posted-date-wrapper {
+      text-align: center;
+      color: $gentle-gray;
+      margin-top: 40px;
+      margin-bottom: 25px;
+      .posted-date {
+        padding-left: .4em;
+      }
+    }
+
+    .archive-list {
+      list-style-type: none;
+
+      .archive-posted-date-wrapper {
+        color: $gentle-gray;
+        margin-right: .8em;
+        .posted-date {
+          padding-left: .4em;
+        }
+      }
+    }
+
+    .article-separator {
+      margin-bottom: 100px;
+    }
+
+    .article-header-separator {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+    }
+
+    .read-more {
+      font-size: 1.5rem;
+      margin-top: 2.0rem;
+      padding-right: $content-body-padding;
+      @include clearfix;
+      a {
+        float: right;
+      }
+    }
+
+    .movie-wrapper {
+      margin: 30px auto;
+      padding: 0 $content-body-padding;
+      width: 90%;
+      @include breakpoint($content-body-width) {
+        width: 640px;
+      }
+
+      .movie {
+        position: relative;
+        width: 100%;
+
+        iframe{
+      	  position: absolute;
+      	  top: 0;
+      	  right: 0;
+      	  width: 100%;
+      	  height: 100%;
+        }
+      }
+    }
+
+    .paginate-wrapper {
+      @include pie-clearfix;
+      margin: 4.0rem;
+      font-size: 1.5rem;
+
+      .previous-page {
+	float: left;
+      }
+
+      .next-page {
+	float: right;
+      }
+    }
+
+    .page-number {
+      margin-top: 3.0rem;
+      font-size: 1.5em;
+      text-align: center;
+    }
+  }
+}

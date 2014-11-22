@@ -1,0 +1,124 @@
+// MIX-INS
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+  zoom: 1;
+  min-zoom: 1;
+  max-zoom: 3;
+  user-zoom: fixed;
+}
+
+* {
+  @include selection($beam-gray, white)
+}
+
+html {
+  font-size: $em-normalize-ratio;
+  background: $blind-gray;
+}
+
+body {
+  @include font-smoothing;
+  background-color: $default-background-color;
+  font-family: $default-font-family;
+  line-height: $default-line-height;
+  font-size: $default-font-size;
+  color: $default-text-color;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin: $h1-font-size 0;
+
+  a {
+    color: $default-text-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin: $h2-font-size + .8rem 0;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  font-weight: bold;
+  margin: $h3-font-size + 1.5rem 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 24px 0;
+  background: $border-gray;
+}	
+
+ul, ol {
+  margin-top: $default-font-size + 1.0rem;
+  margin-bottom: $default-font-size + 1.0rem;
+  margin-left: 2.0rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+a {
+  color: $link-color;
+}
+
+pre {
+  overflow: scroll;
+  background: $code-gray;
+  font-family: $monospace;
+  font-size: 1.3rem;
+  @include breakpoint($large-screen) {
+    font-size: 1.4rem;
+  }
+  line-height: 1.5;
+  margin: 3.0rem auto;
+  padding: 1.4rem;
+  border: 1px solid $whity-light-gray;
+}
+
+code {
+  font-family: $monospace;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}

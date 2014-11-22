@@ -1,0 +1,18 @@
+.social-wrapper {
+  margin-top: 2.0rem;
+  ul {
+    @include horizontal-list;
+    li {
+      list-style-type: none;
+      font-size: 3.2rem;
+      margin-right: .5rem;
+      a {
+	color: $default-text-color;
+
+	&:hover {
+	  color: $link-color;
+	}
+      }
+    }
+  }
+}

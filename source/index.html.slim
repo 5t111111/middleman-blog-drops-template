@@ -1,0 +1,44 @@
+---
+pageable: true
+per_page: 10
+--- 
+- page_articles.each_with_index do |article, i|
+  h1.article-title
+    = link_to article.title, article
+  .posted-date-wrapper
+    i.fa.fa-clock-o
+    span.posted-date
+      = format_date(article.date)
+  .tag-labels
+    - article.tags.each do |tag|
+      a href="#{tag_path(tag)}"
+        small.tag-label
+          = tag
+  hr.article-header-separator
+  - if article.data.image_src
+    img src=article.data.image_src
+    hr
+  = article.summary
+  .read-more
+    a href=article.url
+      | Read More 
+      i.fa.fa-angle-double-right
+  hr.article-separator
+.paginate-wrapper
+  - if paginate
+    - if prev_page
+      .previous-page
+        a href="#{prev_page.url}"
+          i.fa.fa-arrow-left
+          |  Previous Page
+    - if next_page
+      .next-page
+        a href="#{next_page.url}"
+          i.fa.fa-arrow-right
+          |  Next Page
+- if num_pages > 1
+  .page-number
+    | Page 
+    = page_number
+    |  of 
+    = num_pages

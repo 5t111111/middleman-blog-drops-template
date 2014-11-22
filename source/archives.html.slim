@@ -1,0 +1,16 @@
+---
+pageable: true
+--- 
+
+- title 'Archives'
+
+h1
+  | Archives
+ul.archive-list
+  - blog.articles.each do |article|
+    li
+      span.archive-posted-date-wrapper
+        i.fa.fa-clock-o
+        span.posted-date
+          = article.date.strftime('%Y-%m-%d')
+      = link_to "#{article.title}", article.url
