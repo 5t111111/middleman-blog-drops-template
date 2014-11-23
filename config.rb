@@ -111,6 +111,16 @@ helpers do
       end
   end
 
+  def page_description
+    if current_article && current_article.summary(100)
+      current_article.summary(100)
+    elsif @page_title
+      @page_title + ' page of ' + site_title
+    else
+      site_description
+    end
+  end
+
   def analytics_account
     google_analytics_account
     rescue NameError
@@ -175,6 +185,8 @@ activate :directory_indexes
 set :site_url, 'http://blog.example.com'
 # set site title
 set :site_title, 'Drops Template'
+# set site description (only used for meta description for the moment)
+set :site_description, 'Site Description'
 # set site author name
 set :site_author, 'Site Author'
 # set site author profile information
