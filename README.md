@@ -60,14 +60,17 @@ Now you are ready to write your own articles. Create markdown file (.md) in `sou
 
 Edit at least the following settings in the bottom section of `config.rb`.
 
-| name                        | description                         |
-|:---------------------------:|:-----------------------------------:|
-| :site_url                   | your blog URL                       |
-| :site_author                | author name                         |
-| :site_author_profile        | author profile information          |
-| :site_author_image          | author profile image                |
-| :social_links               | social link buttons in author page  |
-| :google_analytics_account   | Google Analytics account (optional) |
+| name                        | description                                                                             |
+|:---------------------------:|:---------------------------------------------------------------------------------------:|
+| :site_url                   | your blog URL                                                                           |
+| :site_title                 | your blog title                                                                         |
+| :site_description           | (only used for meta description for the moment)                                         |
+| :site_author                | author name                                                                             |
+| :site_author_profile        | author profile information                                                              |
+| :site_author_image          | author profile image                                                                    |
+| :reverse_title              | when true, the page and site titles will be reversed (page title | site title)          |
+| :social_links               | social link buttons in author page                                                      |
+| :google_analytics_account   | Google Analytics account (optional)                                                     |
 
 ## License
 
