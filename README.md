@@ -64,7 +64,7 @@ Edit at least the following settings in the bottom section of `config.rb`.
 |:---------------------------:|:---------------------------------------------------------------------------------------:|
 | :site_url                   | your blog URL                                                                           |
 | :site_title                 | your blog title                                                                         |
-| :site_description           | (only used for meta description for the moment)                                         |
+| :site_description           | your blog description (only used for meta description for the moment)                   |
 | :site_author                | author name                                                                             |
 | :site_author_profile        | author profile information                                                              |
 | :site_author_image          | author profile image                                                                    |
