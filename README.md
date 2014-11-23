@@ -72,6 +72,44 @@ Edit at least the following settings in the bottom section of `config.rb`.
 | :social_links               | social link buttons in author page                                                      |
 | :google_analytics_account   | Google Analytics account (optional)                                                     |
 
+## Heroku deployment
+
+Since Drops provides the configuration of Rack appliction for static file serving, in almost all cases you don't need to setup any server configuration at all. 
+
+Edit your Gemfile to specify Ruby version you want to use.
+
+```ruby
+source 'https://rubygems.org'
+source 'https://rails-assets.org'
+
+ruby '2.1.5'
+
+# middleman
+gem 'middleman', '~> 3.3.5'
+
+...
+```
+
+Now commit all changes and create Heroku app.
+
+```text
+$ heroku create
+```
+
+Push it to Heroku.
+
+```text
+$ git push heroku master
+```
+
+Open it in a web browser.
+
+```text
+$ heroku open
+```
+
+See `config.ru` and `Procfile` for details.
+
 ## License
 
 Drops (except the images) is licensed under MIT license.
