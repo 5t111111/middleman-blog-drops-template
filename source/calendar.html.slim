@@ -1,6 +1,15 @@
 ---
 pageable: true
 --- 
+
+- case page_type
+- when 'day'
+  - title Date.new(year, month, day).strftime('%b %e %Y')
+- when 'month'
+  - title Date.new(year, month, 1).strftime('%b %Y')
+- when 'year'
+  - title year.to_s
+
 h1
   | Archive for 
   - case page_type
