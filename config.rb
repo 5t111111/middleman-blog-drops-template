@@ -83,10 +83,32 @@ helpers do
   end
 
   def format_title
-    title = site_title
-    title += ' | ' + current_article.title unless current_article.nil?
-    title += ' | ' + @page_title unless @page_title.nil?
-    title
+    separator = ' | '
+    if reverse_title
+      if current_article
+        current_article.title + separator + site_title
+      elsif @page_title
+        @page_title + separator + site_title
+      else
+        site_title
+      end
+    else
+      if current_article
+        site_title + separator + current_article.title
+      elsif @page_title
+        site_title + separator + @page_title
+      else
+        site_title
+      end
+    end
+    rescue NameError
+      if current_article
+        site_title + separator + current_article.title
+      elsif @page_title
+        site_title + separator + @page_title
+      else
+        site_title
+      end
   end
 
   def analytics_account
@@ -159,6 +181,8 @@ set :site_author, 'Site Author'
 set :site_author_profile, 'Lorem ipsum dolor sit amet, cu facilis indoctum interpretaris has. Ius ea quod euismod fierent, per in legere gubergren accommodare, ut labitur partiendo urbanitas duo. Tamquam inciderint at sed. Per at nibh graecis intellegebat. Probo brute ancillae sit ex, tota recusabo disputando usu et.'
 # set site author profile image (should be in images_dir)
 set :site_author_image, 'profile.png'
+# when true, the page and site titles will be reversed (page title | site title)
+set :reverse_title, true
 # twitter/facebook/github/linkedin links in author page (otherwise set nil)
 set :social_links,
     twitter: 'https://twitter.com',
