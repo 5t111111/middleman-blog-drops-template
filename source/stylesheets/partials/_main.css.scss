@@ -4,6 +4,7 @@ main {
 
   @include breakpoint($content-body-width) {
     width: $content-width;
+    overflow: hidden;
   }
 
   article {
