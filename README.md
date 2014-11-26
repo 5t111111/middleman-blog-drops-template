@@ -14,6 +14,7 @@ Drops is a Middleman blog template.
 - Responsive layout with [Breakpoint](http://breakpoint-sass.com/)
 - Syntax highlighting with [middleman-syntax](https://github.com/middleman/middleman-syntax) (using [rouge](https://github.com/jneen/rouge))
 - [Rails Assets](https://rails-assets.org) for assets management (No longer required to install Bower)
+- No Nokogiri dependency (by using custom middleman-blog with [Oga](https://github.com/YorickPeterse/oga))
 
 ## Installation
 
