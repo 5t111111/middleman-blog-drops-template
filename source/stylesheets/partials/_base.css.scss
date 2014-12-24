@@ -129,3 +129,42 @@ blockquote {
   padding-left: 1.0rem;
   color: lighten($default-text-color, 20);
 }
+
+table {
+  margin-top: $default-font-size + 1.0rem;
+  margin-bottom: $default-font-size + 1.0rem;
+
+  tr {
+    border-top: 1px solid $whity-gray;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    &:nth-child(2n) {
+      background-color: $code-gray;
+    }
+  }
+
+  tr th {
+    font-weight: bold;
+    border: 1px solid $whity-gray;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+
+  tr td {
+    border: 1px solid $whity-gray;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+
+  tr th :first-child, tr td :first-child {
+    margin-top: 0;
+  }
+
+  tr th :last-child, tr td :last-child {
+    margin-bottom: 0;
+  }
+}
