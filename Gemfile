@@ -7,7 +7,7 @@ gem 'middleman', '~> 3.3.7'
 # use oga for html parser (without nokogiri)
 gem 'middleman-blog', :github => '5t111111/middleman-blog',
                       :branch => 'with-oga'
-gem 'oga', '~> 0.2.0'
+gem 'oga', '~> 0.3.0'
 
 # For syntax highlighting
 gem 'middleman-syntax', '~> 2.0.0'
