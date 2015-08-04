@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 # middleman
 gem 'middleman', '~> 3.3.7'
@@ -30,9 +29,6 @@ gem 'sitemap_generator', '~> 5.0.5'
 # Compass plugins
 gem 'breakpoint', '~> 2.5.0'
 
-# Rails Assets
-gem 'rails-assets-font-awesome', '~> 4.3.0', :require => false
-
 # Web server
 gem 'puma', '~> 2.11.0'
 
@@ -41,3 +37,8 @@ gem 'rack-contrib', '~> 1.2.0'
 
 # Heroku New Relic Addon
 gem 'newrelic_rpm'
+
+# Rails Assets
+source 'https://rails-assets.org' do
+  gem 'rails-assets-font-awesome', '~> 4.3.0', :require => false
+end
