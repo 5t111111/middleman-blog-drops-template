@@ -57,6 +57,7 @@ h2 {
   font-size: $h2-font-size;
   line-height: $h2-line-height;
   margin: $h2-font-size + .8rem 0;
+  word-wrap: break-word;
 }
 
 h3 {
