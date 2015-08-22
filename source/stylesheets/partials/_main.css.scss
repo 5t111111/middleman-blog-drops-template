@@ -1,10 +1,10 @@
 main {
+  margin: 80px auto;
   width: 100%;
-  margin: 80px auto 80px auto;
 
   @include breakpoint($content-body-width) {
-    width: $content-width;
     overflow: hidden;
+    width: $content-width;
   }
 
   article {
@@ -12,9 +12,9 @@ main {
     padding: 0 $content-body-padding;
 
     .article-title {
+      margin-bottom: 5rem;
+      margin-top: 10rem;
       text-align: center;
-      margin-top: 10.0rem;
-      margin-bottom: 5.0rem;
     }
 
     .tag-list {
@@ -22,40 +22,41 @@ main {
     }
 
     .tag-labels {
-      text-align: center;
       margin-left: .7rem; // centering
+      text-align: center;
     }
-    
+
     .tag-label {
       @include border-radius(13px);
+      background: darken($feather-gray, 4);
       border: 0 none;
-      color: white;
+      color: $white;
       cursor: pointer;
       display: inline-block;
       font-size: 1.3rem;
+      font-weight: bold;
       line-height: 1.3;
       margin-bottom: .8rem;
       margin-right: .7rem;
-      padding: .4rem 1.2rem .5rem 1.2rem;
-      font-weight: bold;
+      padding: .4rem 1.2rem .5rem;
       text-align: center;
-      background: darken($feather-gray, 4);
 
       &:hover {
-    	background: $link-color;
+        background: $link-color;
       }
 
       a {
-        color: white;
-	width: 100%;
+        color: $white;
+        width: 100%;
       }
     }
 
     .posted-date-wrapper {
-      text-align: center;
       color: $gentle-gray;
-      margin-top: 40px;
       margin-bottom: 25px;
+      margin-top: 40px;
+      text-align: center;
+
       .posted-date {
         padding-left: .4em;
       }
@@ -78,8 +79,8 @@ main {
     }
 
     .article-header-separator {
-      margin-top: 50px;
       margin-bottom: 50px;
+      margin-top: 50px;
     }
 
     img {
@@ -89,10 +90,11 @@ main {
     }
 
     .read-more {
-      font-size: 1.5rem;
-      margin-top: 2.0rem;
-      padding-right: $content-body-padding;
       @include clearfix;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      padding-right: $content-body-padding;
+
       a {
         float: right;
       }
@@ -102,6 +104,7 @@ main {
       margin: 40px auto;
       padding: 0 $content-body-padding;
       width: 90%;
+
       @include breakpoint($content-body-width) {
         width: 640px;
       }
@@ -110,35 +113,35 @@ main {
         position: relative;
         width: 100%;
 
-        iframe{
-      	  position: absolute;
-      	  top: 0;
-      	  right: 0;
-      	  width: 100%;
-      	  height: 100%;
+        iframe {
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 100%;
         }
       }
     }
 
     .paginate-wrapper {
       @include pie-clearfix;
-      margin: 4.0rem;
       font-size: 1.5rem;
+      margin: 4rem;
 
       .previous-page {
-	float: left;
+        float: left;
       }
 
       .next-page {
-	float: right;
+        float: right;
       }
     }
 
     .page-number {
-      margin-top: 3.0rem;
-      font-size: 1.5rem;
-      text-align: center;
       color: $gentle-gray;
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      text-align: center;
     }
   }
 }

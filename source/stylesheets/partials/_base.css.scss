@@ -1,18 +1,16 @@
 // MIX-INS
 @mixin font-smoothing($value: antialiased) {
   @if $value == antialiased {
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  @else {
-    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+  } @else {
     -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
 
 @viewport {
   width: device-width;
-  initial-scale: 1;
   zoom: 1;
   min-zoom: 1;
   max-zoom: 3;
@@ -20,21 +18,21 @@
 }
 
 * {
-  @include selection($beam-gray, white)
+  @include selection($beam-gray, $white)
 }
 
 html {
-  font-size: $em-normalize-ratio;
   background: $blind-gray;
+  font-size: $em-normalize-ratio;
 }
 
 body {
   @include font-smoothing;
   background-color: $default-background-color;
-  font-family: $default-font-family;
-  line-height: $default-line-height;
-  font-size: $default-font-size;
   color: $default-text-color;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
 
   a {
     text-decoration: none;
@@ -63,8 +61,8 @@ h2 {
 
 h3 {
   font-size: $h3-font-size;
-  line-height: $h3-line-height;
   font-weight: bold;
+  line-height: $h3-line-height;
   margin: $h3-font-size + 1.5rem 0;
 }
 
@@ -73,24 +71,24 @@ p {
 }
 
 hr {
+  background: $border-gray;
   border: 0;
   height: 1px;
   margin: 24px 0;
-  background: $border-gray;
-}	
-
-ul, ol {
-  margin-top: $default-font-size + 1.0rem;
-  margin-bottom: $default-font-size + 1.0rem;
-  margin-left: 2.0rem;
 }
 
 ul {
   list-style: disc;
+  margin-bottom: $default-font-size + 1rem;
+  margin-left: 2rem;
+  margin-top: $default-font-size + 1rem;
 }
 
 ol {
   list-style-type: decimal;
+  margin-bottom: $default-font-size + 1rem;
+  margin-left: 2rem;
+  margin-top: $default-font-size + 1rem;
 }
 
 a {
@@ -98,17 +96,18 @@ a {
 }
 
 pre {
-  overflow: scroll;
   background: $code-gray;
+  border: 1px solid $whity-light-gray;
   font-family: $monospace;
   font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 3rem auto;
+  overflow: scroll;
+  padding: 1.4rem;
+
   @include breakpoint($large-screen) {
     font-size: 1.4rem;
   }
-  line-height: 1.5;
-  margin: 3.0rem auto;
-  padding: 1.4rem;
-  border: 1px solid $whity-light-gray;
 }
 
 code {
@@ -125,46 +124,54 @@ em {
 
 blockquote {
   border-left: 3px solid $whity-light-gray;
-  margin: 3.0rem 1.0rem;
-  padding-left: 1.0rem;
   color: lighten($default-text-color, 20);
+  margin: 3rem 1rem;
+  padding-left: 1rem;
 }
 
 table {
-  margin-top: $default-font-size + 1.0rem;
-  margin-bottom: $default-font-size + 1.0rem;
+  margin-bottom: $default-font-size + 1rem;
+  margin-top: $default-font-size + 1rem;
 
   tr {
+    background-color: $white;
     border-top: 1px solid $whity-gray;
-    background-color: white;
     margin: 0;
     padding: 0;
 
     &:nth-child(2n) {
       background-color: $code-gray;
     }
-  }
 
-  tr th {
-    font-weight: bold;
-    border: 1px solid $whity-gray;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-  }
+    th {
+      border: 1px solid $whity-gray;
+      font-weight: bold;
+      margin: 0;
+      padding: 6px 13px;
+      text-align: left;
 
-  tr td {
-    border: 1px solid $whity-gray;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-  }
+      &:first-child {
+        margin-top: 0;
+      }
 
-  tr th :first-child, tr td :first-child {
-    margin-top: 0;
-  }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
-  tr th :last-child, tr td :last-child {
-    margin-bottom: 0;
+    td {
+      border: 1px solid $whity-gray;
+      margin: 0;
+      padding: 6px 13px;
+      text-align: left;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

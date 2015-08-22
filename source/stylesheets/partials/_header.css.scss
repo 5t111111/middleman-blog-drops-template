@@ -1,9 +1,10 @@
 header {
+  background-image: image_url("drops.png");
+  background-position: -300px 40px;
+  background-repeat: no-repeat;
   height: 320px;
   margin: 0 auto;
-  background-image: image_url("drops.png");
-  background-repeat: no-repeat;
-  background-position: -300px 40px;
+
   @include breakpoint($large-screen) {
     background-position: center 40px;
     background-size: contain;
@@ -13,40 +14,41 @@ header {
     height: 400px;
   }
 
-  #top-menu {
+  .top-menu {
+    @include pie-clearfix;
     background-color: $blind-gray;
-    width: 100%;
     height: $top-menu-height;
     position: fixed;
     top: 0;
+    width: 100%;
     z-index: 100;
 
-    @include pie-clearfix;
-
     .top-menu-wrapper {
+      color: $top-menu-text-color;
+      margin: 0 auto;
+      padding-top: .9rem;
       width: 100%;
+
       @include breakpoint($large-screen) {
         width: $content-width;
       }
-      margin: 0 auto;
-      padding-top: .9rem;
-      color: $top-menu-text-color;
 
       a {
-	color: $top-menu-text-color;
+        color: $top-menu-text-color;
 
-	&:hover {
-	  color: $whity-light-gray;
-        }	
+        &:hover {
+          color: $whity-light-gray;
+        }
       }
 
       .top-menu-list {
-	float: left;
+        float: left;
+        margin-left: 15px;
         width: 80%;
-	margin-left: 15px;
+
         @include breakpoint($large-screen) {
-	  margin-left: 30px;
-	}
+          margin-left: 30px;
+        }
 
         ul {
           @include horizontal-list;
@@ -56,40 +58,40 @@ header {
             margin: 0;
 
             &:after {
-              content: "\2219";
+              content: '\2219';
               margin-left: 10px;
               margin-right: 3px;
             }
 
-            &:last-child:after { content: ""; }
+            &:last-child:after { content: ''; }
           }
         }
       }
 
       .feed {
-	float: right;
-	width: 10%;
-	text-align: left;
-	@include breakpoint($large-screen) {
-	  margin-right: 60px;
-	  text-align: right;
-	}
+        float: right;
+        line-height: 2.2rem;
+        text-align: left;
+        width: 10%;
 
-	line-height: 2.2rem;
+        @include breakpoint($large-screen) {
+          margin-right: 60px;
+          text-align: right;
+        }
 
-	i {
-	  font-size: 1.8rem;
-	}
+        i {
+          font-size: 1.8rem;
+        }
       }
     }
   }
 
   .logo {
     margin: 0 auto;
-
     padding: 260px 20px 0 160px;
+
     @include breakpoint($large-screen) {
-      padding: 250px 20px 0 20px;
+      padding: 250px 20px 0;
     }
 
     $site-title-logo-image: false;
@@ -102,11 +104,12 @@ header {
       }
     } @else {
       .logo-text {
+        color: #1d1d1d;
         display: block;
+        font-size: 6vw;
         margin: 0 auto;
         text-align: center;
-        color: #1d1d1d;
-        font-size: 6vw;
+
         @include breakpoint($large-screen) {
           font-size: 2.5em;
         }

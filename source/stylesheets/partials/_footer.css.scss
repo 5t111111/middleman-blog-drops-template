@@ -6,36 +6,40 @@ footer {
 
   .footer-wrapper {
     height: 20px;
-    margin: 10px auto 0 auto;
-    width :100%;
+    margin: 10px auto 0;
+    width: 100%;
+
     @include breakpoint($large-screen) {
       width: $content-width;
     }
 
     a {
       color: $footer-text-color;
+
       &:hover {
         color: $whity-light-gray;
-      }	
+      }
     }
 
     .copyright {
-      text-align: center;
-      padding-top: 20px;
       padding-bottom: 20px;
+      padding-top: 20px;
+      text-align: center;
     }
-    
+
     .author {
       @include pie-clearfix;
+
       .image-wrapper {
         float: right;
+
         img {
           @include border-radius(75px);
-          width: 75px;
+          @include box-shadow($blind-gray 0 -1px 0 15px);
           height: 75px;
-    	  margin-top: -40px;
-	  margin-right: 40px;
- 	  @include box-shadow($blind-gray 0px -1px 0 15px);
+          margin-right: 40px;
+          margin-top: -40px;
+          width: 75px;
         }
       }
     }
