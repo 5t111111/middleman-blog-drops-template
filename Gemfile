@@ -23,6 +23,9 @@ gem 'slim', '~> 3.0.1'
 # For GitHub Pages deployment
 gem 'middleman-deploy', '~> 1.0'
 
+# For S3 deployment
+gem 'middleman-s3_sync'
+
 # For Markdown
 gem 'redcarpet', '~> 3.2.2'
 
