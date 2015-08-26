@@ -108,6 +108,13 @@ activate :sitemap_generator
 # Activate Directory Indexes
 activate :directory_indexes
 
+# Activate Deploy
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
 ###
 # Site Settings
 ###

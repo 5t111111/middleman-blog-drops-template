@@ -20,6 +20,9 @@ gem 'builder', '~> 3.2.2'
 # For using Slim template
 gem 'slim', '~> 3.0.1'
 
+# For GitHub Pages deployment
+gem 'middleman-deploy', '~> 1.0'
+
 # For Markdown
 gem 'redcarpet', '~> 3.2.2'
 

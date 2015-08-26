@@ -9,12 +9,13 @@ Drops is a Middleman blog template.
 ## Features
 
 - Lovely darkish water drop mascot
-- Heroku deployment ready (You can also add New Relic addon out of the box)
 - Automatically generate the sitemap and the Atom feed
 - Responsive layout with [Breakpoint](http://breakpoint-sass.com/)
 - Syntax highlighting with [middleman-syntax](https://github.com/middleman/middleman-syntax) (using [rouge](https://github.com/jneen/rouge))
 - [Rails Assets](https://rails-assets.org) for assets management (No longer required to install Bower)
 - No Nokogiri dependency (by using custom middleman-blog with [Oga](https://github.com/YorickPeterse/oga))
+- GitHub Pages deployment ready
+- (**deprecated**) Heroku deployment ready (You can also add New Relic addon out of the box)
 
 ## Installation
 
@@ -73,9 +74,37 @@ Edit at least the following settings in the bottom section of `config.rb`.
 | :social_links               | social link buttons in author page                                                      |
 | :google_analytics_account   | Google Analytics account (optional)                                                     |
 
+## GitHub Pages deployment
+
+### Create a GitHub repository
+
+When you would like to deploy a blog to GitHb Pages, at first you have to create a new repository named "{username}.github.io". The repository name should be "5t111111.github.io" when your GitHub account name is "5t111111".
+
+### Set origin
+
+Once the repository is created, set it to origin of your blog respository.
+
+```text
+$ git remote add origin git@github.com:5t111111/5t111111.github.io.git
+```
+
+### Deployment
+
+By just running the following command, static pages are automatically built and deployed to the repository you created.
+
+```text
+$ bundle exec middleman deploy
+```
+
+### Accessing to your blog page
+
+You can visit your blog page as the reposiory name. http://5t111111.github.io when the repository you have created is "5t111111.github.io".
+
 ## Heroku deployment
 
-Since Drops provides the configuration of Rack appliction for static file serving, in almost all cases you don't need to setup any server configuration at all. 
+**This is a deprecated feature because of Heroku's changes to their pricing. Although this feature is still available out of the box, it may be removed in a future release.**
+
+Since Drops provides the configuration of Rack appliction for static file serving, in almost all cases you don't need to setup any server configuration at all.
 
 Edit your Gemfile to specify Ruby version you want to use.
 
