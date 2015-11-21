@@ -43,8 +43,3 @@ gem 'rack-contrib', '~> 1.2.0'
 
 # Heroku New Relic Addon
 gem 'newrelic_rpm'
-
-# Rails Assets
-source 'https://rails-assets.org' do
-  gem 'rails-assets-font-awesome', '~> 4.3.0', :require => false
-end

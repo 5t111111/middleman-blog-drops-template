@@ -1,0 +1,22 @@
+{
+  "name": "middleman-blog-drops-template",
+  "version": "0.1.2",
+  "description": "A blog template for Middleman which lets you start blogging immediately. Supports GitHub Pages and S3 deployment, sitemap, Atom feed, Google Analytics, responsive layout and syntax highlighting.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5t111111/middleman-blog-drops-template.git"
+  },
+  "author": "Hirofumi Wakasugi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/5t111111/middleman-blog-drops-template/issues"
+  },
+  "homepage": "https://github.com/5t111111/middleman-blog-drops-template#readme",
+  "dependencies": {
+    "font-awesome": "^4.4.0"
+  }
+}

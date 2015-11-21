@@ -132,6 +132,19 @@ activate :s3_sync do |s3_sync|
   s3_sync.version_bucket             = false
 end
 
+# Add assets path installed via npm
+after_configuration do
+  sprockets.append_path File.join "#{root}", "node_modules"
+
+  Dir.glob(File.join("#{root}", "node_modules", "*", "fonts", "*")) do |file|
+    asset_path = Pathname.new(file).relative_path_from(Pathname.new(File.join(root, "node_modules")))
+    sprockets.import_asset asset_path do |path|
+      org_path = Pathname.new(path)
+      "fonts/#{org_path.basename}"
+    end
+  end
+end
+
 ###
 # Site Settings
 ###
