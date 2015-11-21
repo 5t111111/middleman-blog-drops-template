@@ -12,7 +12,7 @@ Drops is a Middleman blog template.
 - Automatically generate the sitemap and the Atom feed
 - Responsive layout with [Breakpoint](http://breakpoint-sass.com/)
 - Syntax highlighting with [middleman-syntax](https://github.com/middleman/middleman-syntax) (using [rouge](https://github.com/jneen/rouge))
-- [Rails Assets](https://rails-assets.org) for assets management (No longer required to install Bower)
+- [npm](https://www.npmjs.com/) for assets management
 - No Nokogiri dependency (by using custom middleman-blog with [Oga](https://github.com/YorickPeterse/oga))
 - GitHub Pages deployment ready
 - S3 deployment ready
@@ -40,11 +40,20 @@ $ git clone https://github.com/5t111111/middleman-blog-drops-template.git blog-d
 $ middleman init my_blog_project --template=blog-drops
 ```
 
-### Install gems
+### Install gems and npm packages
 
 ```console
 $ cd my_blog_project
 $ bundle install
+$ npm install
+```
+
+Note: For the moment npm is used only for installing [Font Awesome](https://fortawesome.github.io/Font-Awesome/), so in the case if you don't want to install Node, you can manually download Font Awesome and place it in `node_modules` directory like the followings.
+
+``` text
+# After downloading Font Awesome and unzip an archive
+$ mkdir node_modules
+$ mv /path/to/font-awesome-x.x.x node_modules/font-awesome
 ```
 
 ### Start Middleman server
