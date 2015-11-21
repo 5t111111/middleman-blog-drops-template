@@ -1,6 +1,6 @@
 {
   "name": "middleman-blog-drops-template",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A blog template for Middleman which lets you start blogging immediately. Supports GitHub Pages and S3 deployment, sitemap, Atom feed, Google Analytics, responsive layout and syntax highlighting.",
   "main": "index.js",
   "scripts": {
