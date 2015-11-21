@@ -24,7 +24,7 @@ gem 'slim', '~> 3.0.1'
 gem 'middleman-deploy', '~> 1.0'
 
 # For S3 deployment
-gem 'middleman-s3_sync'
+gem 'middleman-s3_sync', '~> 3.0.47'
 
 # For Markdown
 gem 'redcarpet', '~> 3.2.2'
