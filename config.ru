@@ -4,6 +4,7 @@ require 'rack/contrib/try_static'
 require 'newrelic_rpm' if ENV['RACK_ENV'] == 'production'
 
 # Build the static site when the app boots
+`npm install`
 `bundle exec middleman build`
 
 use Rack::TryStatic,
