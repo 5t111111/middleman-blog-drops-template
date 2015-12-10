@@ -169,9 +169,8 @@ Edit your Gemfile to specify Ruby version you want to use.
 
 ```ruby
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
-ruby '2.1.5'
+ruby '2.2.3'
 
 # middleman
 gem 'middleman', '~> 3.3.5'
@@ -197,7 +196,7 @@ Open it in a web browser.
 $ heroku open
 ```
 
-See `config.ru` and `Procfile` for details.
+See `config.ru`, `Procfile` and `.buildpacks` for details.
 
 ## License
 
