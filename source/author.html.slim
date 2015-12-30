@@ -3,12 +3,12 @@
 h1
   | Author
 h3
-  = site_author
+  = data.settings.site_author
 p
-  = site_author_profile
+  = data.settings.site_author_profile
 .social-wrapper
   ul
-    - social_links.each do |name, url|
+    - data.settings.social_links.each do |name, url|
       - if url
         li
           a href="#{url}"

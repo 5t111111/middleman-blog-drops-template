@@ -1,0 +1,13 @@
+site_url: 'http://blog.example.com'
+site_title: 'Drops Template'
+site_description: 'Site Description'
+site_author: 'Site Author'
+site_author_profile: 'Lorem ipsum dolor sit amet, cu facilis indoctum interpretaris has. Ius ea quod euismod fierent, per in legere gubergren accommodare, ut labitur partiendo urbanitas duo. Tamquam inciderint at sed. Per at nibh graecis intellegebat. Probo brute ancillae sit ex, tota recusabo disputando usu et.'
+site_author_image: 'profile.png'
+reverse_title: true
+social_links:
+  twitter: 'https://twitter.com'
+  facebook: 'https://facebook.com'
+  github: 'https://github.com/5t111111'
+  linkedin: 'https://linkedin.com'
+# google_analytics_account: 'XX-12345678-9'
