@@ -21,7 +21,7 @@ gem 'builder', '~> 3.2.2'
 gem 'slim', '~> 3.0.1'
 
 # For GitHub Pages deployment
-gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 # For S3 deployment
 gem 'middleman-s3_sync', '~> 3.0.47'
