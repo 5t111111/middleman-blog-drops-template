@@ -8,7 +8,8 @@ html lang="ja"
       = format_title
     meta[description="#{page_description}"]
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
-    = stylesheet_link_tag "all"
+    link[rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"]
+    = stylesheet_link_tag :all
     = favicon_tag '/images/favicon.png'
     = partial "partials/analytics"
   body

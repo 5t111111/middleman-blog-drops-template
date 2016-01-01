@@ -1,10 +1,10 @@
-@import 'compass';
-@import 'compass/reset';
-@import 'compass/css3/selection';
+@import "../../node_modules/compass-mixins/lib/compass/reset-legacy";
+@import "../../node_modules/compass-mixins/lib/compass/css3/border-radius";
+@import "../../node_modules/compass-mixins/lib/compass/css3/box-shadow";
+@import "../../node_modules/compass-mixins/lib/compass/utilities/general/clearfix";
+@import "../../node_modules/compass-mixins/lib/compass/utilities/lists/horizontal-list";
 
-@import 'breakpoint';
-
-@import "font-awesome/scss/font-awesome";
+@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 

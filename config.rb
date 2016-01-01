@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-require 'extensions/sitemap.rb'
+# require 'extensions/sitemap.rb'
 
 Time.zone = 'UTC'
 
@@ -30,15 +30,6 @@ page '/sitemap.xml', layout: false
 page '/robots.txt', layout: false
 
 ###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -58,11 +49,6 @@ page '/robots.txt', layout: false
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
-
-# Asset directory settings
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
 
 # Markdown settings
 set :markdown_engine, :redcarpet
@@ -103,7 +89,7 @@ activate :livereload
 activate :syntax
 
 # Generate sitemap after build
-activate :sitemap_generator
+# activate :sitemap_generator
 
 # Activate Directory Indexes
 activate :directory_indexes
@@ -130,19 +116,4 @@ activate :s3_sync do |s3_sync|
   s3_sync.encryption                 = false
   s3_sync.prefix                     = ''
   s3_sync.version_bucket             = false
-end
-
-# Add assets path installed via npm
-after_configuration do
-  sprockets.append_path File.join "#{root}", "node_modules"
-
-  Dir.glob(File.join("#{root}", "node_modules", "*", "fonts", "*")) do |file|
-    asset_path = Pathname.new(file).relative_path_from(Pathname.new(File.join(root, "node_modules")))
-    p asset_path
-    sprockets.append_path File.join "#{root}", "node_modules", File.dirname(asset_path)
-    # sprockets.import_asset asset_path do |path|
-    #   org_path = Pathname.new(path)
-    #   "fonts/#{org_path.basename}"
-    # end
-  end
 end
