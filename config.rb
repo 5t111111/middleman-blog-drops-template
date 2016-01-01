@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-# require 'extensions/sitemap.rb'
+require 'extensions/sitemap.rb'
 
 Time.zone = 'UTC'
 
@@ -89,7 +89,7 @@ activate :livereload
 activate :syntax
 
 # Generate sitemap after build
-# activate :sitemap_generator
+activate :sitemap_generator
 
 # Activate Directory Indexes
 activate :directory_indexes

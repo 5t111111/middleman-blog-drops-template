@@ -1,6 +1,10 @@
 require 'sitemap_generator'
 
-module GoogleSitemapGenerator
+class GoogleSitemapGenerator < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+  end
+
   class << self
     def registered(app)
       app.after_build do |_builder|
@@ -13,7 +17,7 @@ module GoogleSitemapGenerator
         end
       end
     end
-    alias_method :included, :registered
+    alias :included :registered
   end
 end
 
