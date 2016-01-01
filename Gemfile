@@ -1,24 +1,22 @@
 source 'https://rubygems.org'
 
 # middleman
-gem 'middleman', '~> 3.3.7'
+gem 'middleman', '~> 4.0.0'
 
-# use oga for html parser (without nokogiri)
-gem 'middleman-blog', :github => '5t111111/middleman-blog',
-                      :branch => 'with-oga'
-gem 'oga', '~> 0.3.0'
+# middleman-blog
+gem 'middleman-blog', '~> 4.0.0'
 
 # For syntax highlighting
-gem 'middleman-syntax', '~> 2.0.0'
+gem 'middleman-syntax'
 
 # Live-reloading plugin
-gem 'middleman-livereload', '~> 3.4.2'
+gem 'middleman-livereload'
 
 # For feed.xml.builder
-gem 'builder', '~> 3.2.2'
+gem 'builder'
 
 # For using Slim template
-gem 'slim', '~> 3.0.1'
+gem 'slim'
 
 # For GitHub Pages deployment
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
@@ -27,19 +25,16 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-s3_sync', '~> 4.0.1.rc.3'
 
 # For Markdown
-gem 'redcarpet', '~> 3.2.2'
+gem 'redcarpet'
 
 # For sitemap
-gem 'sitemap_generator', '~> 5.0.5'
-
-# Compass plugins
-gem 'breakpoint', '~> 2.5.0'
+gem 'sitemap_generator'
 
 # Web server
-gem 'puma', '~> 2.11.0'
+gem 'puma'
 
 # to serve static files
-gem 'rack-contrib', '~> 1.2.0'
+gem 'rack-contrib'
 
 # Heroku New Relic Addon
 gem 'newrelic_rpm'
