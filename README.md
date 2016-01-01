@@ -2,6 +2,8 @@
 
 Drops is a Middleman blog template.
 
+__Middleman v4 support is still WIP. See `upgrade-to-v4` branch if you are interested.__
+
 ## Screenshot
 
 ![screenshot.jpg](https://raw.githubusercontent.com/wiki/5t111111/middleman-blog-drops-template/images/screenshot.jpg)
