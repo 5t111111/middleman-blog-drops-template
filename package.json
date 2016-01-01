@@ -18,6 +18,6 @@
   "homepage": "https://github.com/5t111111/middleman-blog-drops-template#readme",
   "devDependencies": {
     "breakpoint-sass": "^2.6.1",
-    "compass-mixins": "^0.12.7",
+    "compass-mixins": "^0.12.7"
   }
 }
