@@ -13,7 +13,6 @@ def title(title)
 end
 
 def format_title
-  p data.settings
   separator = ' | '
   if data.settings.reverse_title
     if current_article

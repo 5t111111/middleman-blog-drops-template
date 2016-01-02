@@ -117,3 +117,9 @@ activate :s3_sync do |s3_sync|
   s3_sync.prefix                     = ''
   s3_sync.version_bucket             = false
 end
+
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js -p --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+  source: ".tmp/dist",
+  latency: 1

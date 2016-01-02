@@ -2,7 +2,7 @@
 
 ## Drops (except `/source/images/*.png`)
 
-Copyright (C) 2014 Hirofumi Wakasugi
+Copyright (C) 2014 - 2016 Hirofumi Wakasugi
 
 MIT license.
 

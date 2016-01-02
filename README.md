@@ -66,7 +66,7 @@ Then open `http://localhost:4567` in a web browser.
 
 ### Write article
 
-Now you are ready to write your own articles. Create markdown file (.md) in `source/posts` and start writing. See exmaple article file `2014-11-20-this-is-an-example-article.html.md` for details.
+Now you are ready to write your own articles. Create markdown file (.md) in `source/posts` and start writing. See exmaple article file `2015-11-20-this-is-an-example-article.html.md` for details.
 
 ## Configuration
 
