@@ -2,6 +2,14 @@
 
 Drops is a Middleman blog template.
 
+__NOTE: This branch is still WIP and the document is not up-to-date, but you can try it now.__
+
+``` text
+$ middleman init -T 5t111111/middleman-blog-drops-template#upgrade-to-v4 my-blog
+$ cd my-blog
+$ npm install
+```
+
 ## Screenshot
 
 ![screenshot.jpg](https://raw.githubusercontent.com/wiki/5t111111/middleman-blog-drops-template/images/screenshot.jpg)
