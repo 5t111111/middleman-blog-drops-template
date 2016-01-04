@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # middleman
-gem 'middleman', '~> 3.3.7'
+gem 'middleman', github: 'middleman/middleman', branch: 'v3-stable'
 
 # use oga for html parser (without nokogiri)
 gem 'middleman-blog', :github => '5t111111/middleman-blog',
