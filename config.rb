@@ -97,7 +97,9 @@ configure :build do
 end
 
 # Reload the browser automatically whenever files change
-activate :livereload
+configure :development do
+  activate :livereload
+end
 
 # Syntax highlight settings
 activate :syntax
