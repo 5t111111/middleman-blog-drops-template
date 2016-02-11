@@ -25,7 +25,7 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-s3_sync', '~> 4.0.1.rc.3'
 
 # For Markdown
-gem 'redcarpet'
+gem 'kramdown'
 
 # For sitemap
 gem 'sitemap_generator'

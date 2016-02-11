@@ -51,16 +51,13 @@ page '/robots.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # Markdown settings
-set :markdown_engine, :redcarpet
-set :markdown, hard_wrap: true, \
-               no_intra_emphasis: true, \
-               fenced_code_blocks: true, \
-               gh_blockcode: true, \
-               autolink: true, \
-               tables: true, \
-               with_toc_data: true, \
-               strikethrough: true, \
-               superscript: true
+set :markdown_engine, :kramdown
+set :markdown,
+    layout_engine: :slim,
+    tables: true,
+    autolink: true,
+    smartypants: true,
+    input: 'GFM'
 
 # Build-specific configuration
 configure :build do
