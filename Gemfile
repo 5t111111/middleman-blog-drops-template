@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # middleman
-gem 'middleman', '~> 4.0.0'
+gem 'middleman', '~> 4.1.0'
 
 # middleman-blog
-gem 'middleman-blog', '~> 4.0.0'
+gem 'middleman-blog'
 
 # For syntax highlighting
 gem 'middleman-syntax'
@@ -22,7 +22,7 @@ gem 'slim'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 # For S3 deployment
-gem 'middleman-s3_sync', '~> 4.0.1.rc.3'
+gem 'middleman-s3_sync'
 
 # For Markdown
 gem 'kramdown'
