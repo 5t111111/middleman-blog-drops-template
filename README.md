@@ -2,7 +2,7 @@
 
 Drops is a Middleman blog template.
 
-__Middleman v4 support is still WIP. See `upgrade-to-v4` branch and [this issue](https://github.com/5t111111/middleman-blog-drops-template/issues/1) if you are interested.__
+__This branch is to work with Middleman v3, and will not be maintained anymore. Please consider upgrading Middleman v4 and checking out the master branch.__
 
 ## Screenshot
 
