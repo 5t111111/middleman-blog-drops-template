@@ -12,13 +12,16 @@ Drops is a Middleman blog template.
 
 - Lovely darkish water drop mascot
 - Automatically generate the sitemap and the Atom feed
-- Responsive layout with [Breakpoint](http://breakpoint-sass.com/)
+- Responsive layout with [Breakpoint](https://www.npmjs.com/package/breakpoint-sass)
 - Syntax highlighting with [middleman-syntax](https://github.com/middleman/middleman-syntax) (using [rouge](https://github.com/jneen/rouge))
 - [npm](https://www.npmjs.com/) for assets management
-- No Nokogiri dependency (by using custom middleman-blog with [Oga](https://github.com/YorickPeterse/oga))
 - GitHub Pages deployment ready
 - S3 deployment ready
 - (**deprecated**) Heroku deployment ready (You can also add New Relic addon out of the box)
+
+## Pre-requisites
+
+- [node.js](https://nodejs.org/) along with [npm](https://www.npmjs.com/)
 
 ## Installation
 
@@ -28,34 +31,13 @@ Install Middleman if you haven't done yet.
 $ gem install middleman
 ```
 
-### Clone this template to your machine
-
-```console
-$ mkdir ~/.middleman # if it doesn't exist
-$ cd ~/.middleman
-$ git clone https://github.com/5t111111/middleman-blog-drops-template.git blog-drops
-```
-
 ### Create middleman blog project
 
 ```console
-$ middleman init my_blog_project --template=blog-drops
-```
-
-### Install gems and npm packages
-
-```console
+$ middleman init -T 5t111111/middleman-blog-drops-template my_blog_project
 $ cd my_blog_project
 $ bundle install
 $ npm install
-```
-
-Note: For the moment npm is used only for installing [Font Awesome](https://fortawesome.github.io/Font-Awesome/), so in the case if you don't want to install Node, you can manually download Font Awesome and place it in `node_modules` directory like the followings.
-
-``` text
-# After downloading Font Awesome and unzip an archive
-$ mkdir node_modules
-$ mv /path/to/font-awesome-x.x.x node_modules/font-awesome
 ```
 
 ### Start Middleman server
@@ -72,19 +54,19 @@ Now you are ready to write your own articles. Create markdown file (.md) in `sou
 
 ## Configuration
 
-Edit at least the following settings in the bottom section of `config.rb`.
+Edit at least the following settings in the bottom section of `data/settings.yml`.
 
 | name                        | description                                                                             |
 |:---------------------------:|:---------------------------------------------------------------------------------------:|
-| :site_url                   | your blog URL                                                                           |
-| :site_title                 | your blog title                                                                         |
-| :site_description           | your blog description (only used for meta description for the moment)                   |
-| :site_author                | author name                                                                             |
-| :site_author_profile        | author profile information                                                              |
-| :site_author_image          | author profile image                                                                    |
-| :reverse_title              | when true, the page and site titles will be reversed (page title | site title)          |
-| :social_links               | social link buttons in author page                                                      |
-| :google_analytics_account   | Google Analytics account (optional)                                                     |
+| site_url                   | your blog URL                                                                           |
+| site_title                 | your blog title                                                                         |
+| site_description           | your blog description (only used for meta description for the moment)                   |
+| site_author                | author name                                                                             |
+| site_author_profile        | author profile information                                                              |
+| site_author_image          | author profile image                                                                    |
+| reverse_title              | when true, the page and site titles will be reversed (page title | site title)          |
+| social_links               | social link buttons in author page                                                      |
+| google_analytics_account   | Google Analytics account (optional)                                                     |
 
 ## GitHub Pages deployment
 
@@ -172,10 +154,10 @@ Edit your Gemfile to specify Ruby version you want to use.
 ```ruby
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.3.0'
 
 # middleman
-gem 'middleman', '~> 3.3.5'
+gem 'middleman', '~> 4.1.0'
 
 ...
 ```
