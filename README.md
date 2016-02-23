@@ -2,13 +2,7 @@
 
 Drops is a Middleman blog template.
 
-__NOTE: This branch is still WIP and the document is not up-to-date, but you can try it now.__
-
-``` text
-$ middleman init -T 5t111111/middleman-blog-drops-template#upgrade-to-v4 my-blog
-$ cd my-blog
-$ npm install
-```
+> As of version 1.0.0, it only supports middleman v4. There is `middleman-v3` branch for those who want to use Middleman v3, but it is not going to be maintained anymore.
 
 ## Screenshot
 
