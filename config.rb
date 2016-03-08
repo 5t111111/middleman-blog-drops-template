@@ -59,6 +59,9 @@ set :markdown,
     smartypants: true,
     input: 'GFM'
 
+# Ignore stylesheets because they are handled by webpack
+ignore 'stylesheets/*'
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
