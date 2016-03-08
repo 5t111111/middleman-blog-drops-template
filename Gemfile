@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # middleman
-gem 'middleman', '~> 4.1.0'
+gem 'middleman', '4.1.1' # Middleman 4.1.2 has a problem when building
 
 # middleman-blog
 gem 'middleman-blog'
