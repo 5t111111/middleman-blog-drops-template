@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # middleman
-gem 'middleman', '4.1.1' # Middleman 4.1.2 has a problem when building
+gem 'middleman', '~> 4.1'
 
 # middleman-blog
-gem 'middleman-blog'
+gem 'middleman-blog', '~> 4.1'
 
 # For syntax highlighting
 gem 'middleman-syntax'
