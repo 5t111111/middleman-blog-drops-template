@@ -108,7 +108,7 @@ Open **Properties** of the bucket you just created, and make changes to **Static
 
 - Select **Enable website Hosting**
 - **Index Document:** index.html
-- **Error Document:** 404/index.html
+- **Error Document:** 404.html
 
 ### S3 configuration
 
