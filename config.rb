@@ -2,8 +2,6 @@
 # Blog settings
 ###
 
-require 'extensions/sitemap.rb'
-
 Time.zone = 'UTC'
 
 activate :blog do |blog|
@@ -89,9 +87,6 @@ end
 
 # Syntax highlight settings
 activate :syntax
-
-# Generate sitemap after build
-activate :sitemap_generator
 
 # Activate Directory Indexes
 activate :directory_indexes
