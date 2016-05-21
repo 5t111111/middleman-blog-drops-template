@@ -27,9 +27,6 @@ gem 'middleman-s3_sync'
 # For Markdown
 gem 'kramdown'
 
-# For sitemap
-gem 'sitemap_generator'
-
 # Web server
 gem 'puma'
 
