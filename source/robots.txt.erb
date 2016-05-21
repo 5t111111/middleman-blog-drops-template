@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: <%= data.settings.site_url %>/sitemap.xml.gz
+Sitemap: <%= URI.join(data.settings.site_url, 'sitemap.xml') %>
