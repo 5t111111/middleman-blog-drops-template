@@ -1,13 +1,13 @@
 ---
 pageable: true
---- 
+---
 
 - title 'Tags'
 
 h1
   | Tags
 ul
-  - blog.tags.each do |tag, articles|
+  - blog.tags.sort.each do |(tag, articles)|
     li.tag-list
       a href="#{tag_path(tag)}"
         .tag-label
