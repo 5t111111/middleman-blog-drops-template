@@ -1,18 +1,14 @@
-var webpack = require('webpack');
-var path = require('path');
+var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
-    all: './source/javascripts/all.js'
+    all: path.join(__dirname, 'source/javascripts/all.js'),
+    style: path.join(__dirname, 'source/stylesheets/style.scss')
   },
 
   resolve: {
-    root: path.join(__dirname, 'source/javascripts'),
-    modulesDirectories: [
-      path.join(__dirname, "node_modules"),
-      path.join(__dirname, "source/stylesheets")
-    ],
-    extensions: ['', '.js', '.scss']
+    root: path.join(__dirname, 'source/javascripts')
   },
 
   output: {
@@ -23,24 +19,27 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
+        test: /source\/javascripts\/.*\.js$/,
+        loader: 'babel',
         query: {
           presets: ['es2015']
         }
       },
       {
-        test   : /\.scss$/,
-        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+        test: /\.png$/,
+        loader: 'url?mimetype=image/png'
       },
       {
-        test: /\.png$/,
-        loader: "url-loader?mimetype=image/png"
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract(
+          'style',
+          `css?sourceMap!sass?sourceMap&includePaths[]=${path.join(__dirname, 'node_modules')}`
+        )
       }
     ]
   },
 
-  sassLoader: {
-    includePaths: [path.join(__dirname, "node_modules")]
-  }
-};
+  plugins: [
+    new ExtractTextPlugin('stylesheets/style.css')
+  ]
+}

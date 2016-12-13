@@ -57,13 +57,13 @@ set :markdown,
     smartypants: true,
     input: 'GFM'
 
-# Ignore stylesheets because they are handled by webpack
-ignore 'stylesheets/*'
+# Ignore stylesheet bundle because it is handled by webpack
+ignore 'stylesheets/style'
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
@@ -116,7 +116,7 @@ activate :s3_sync do |s3_sync|
 end
 
 activate :external_pipeline,
-  name: :webpack,
-  command: build? ? './node_modules/webpack/bin/webpack.js -p --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
-  source: ".tmp/dist",
-  latency: 1
+         name: :webpack,
+         command: build? ? '$(npm bin)/webpack --bail -p' : '$(npm bin)/webpack --watch -d --progress --color',
+         source: '.tmp/dist',
+         latency: 1
