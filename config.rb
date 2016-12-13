@@ -57,8 +57,8 @@ set :markdown,
     smartypants: true,
     input: 'GFM'
 
-# Ignore stylesheets because they are handled by webpack
-ignore 'stylesheets/*'
+# Ignore stylesheet bundle because it is handled by webpack
+ignore 'stylesheets/site'
 
 # Build-specific configuration
 configure :build do
