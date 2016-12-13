@@ -7,9 +7,9 @@ html
     title
       = format_title
     meta[description="#{page_description}"]
-    = javascript_include_tag :all
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     link[rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"]
+    = javascript_include_tag :all
     = favicon_tag '/images/favicon.png'
     = partial "partials/analytics"
   body
