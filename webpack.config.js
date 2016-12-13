@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry: {
     all: path.join(__dirname, 'source/javascripts/all.js'),
-    style: path.join(__dirname, 'source/stylesheets/site.scss')
+    style: path.join(__dirname, 'source/stylesheets/style.scss')
   },
 
   resolve: {
@@ -40,6 +40,6 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('stylesheets/site.css')
+    new ExtractTextPlugin('stylesheets/style.css')
   ]
 }
