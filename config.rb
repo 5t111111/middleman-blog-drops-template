@@ -116,7 +116,7 @@ activate :s3_sync do |s3_sync|
 end
 
 activate :external_pipeline,
-  name: :webpack,
-  command: build? ? './node_modules/webpack/bin/webpack.js -p --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
-  source: ".tmp/dist",
-  latency: 1
+         name: :webpack,
+         command: build? ? '$(npm bin)/webpack --bail -p' : '$(npm bin)/webpack --watch -d --progress --color',
+         source: '.tmp/dist',
+         latency: 1
