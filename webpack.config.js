@@ -29,14 +29,23 @@ module.exports = {
     rules: [
       {
         test: /source\/javascripts\/.*\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
         }
       },
       {
         test: /\.png$/,
-        loader: 'url?mimetype=image/png'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              mimetype: 'image/png'
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
@@ -44,12 +53,21 @@ module.exports = {
           {
             use: [
               {
-                loader: "css-loader"
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true
+                }
               }, {
-                loader: "sass-loader"
+                loader: 'sass-loader',
+                options: {
+                  includePaths: [
+                    path.join(__dirname, 'node_modules')
+                  ],
+                  sourceMap: true
+                }
               }
             ],
-            fallback: "style-loader"
+            fallback: 'style-loader'
           }
         )
       }
