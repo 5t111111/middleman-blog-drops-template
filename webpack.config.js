@@ -1,5 +1,11 @@
-var path = require('path')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractSass = new ExtractTextPlugin(
+  {
+    filename: "[name].[contenthash].css",
+    disable: process.env.NODE_ENV === "development"
+  }
+)
 
 module.exports = {
   entry: {
@@ -8,7 +14,10 @@ module.exports = {
   },
 
   resolve: {
-    root: path.join(__dirname, 'source/javascripts')
+    modules: [
+      path.join(__dirname, 'source/javascripts'),
+      'node_modules'
+    ]
   },
 
   output: {
@@ -17,29 +26,55 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /source\/javascripts\/.*\.js$/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
         }
       },
       {
         test: /\.png$/,
-        loader: 'url?mimetype=image/png'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              mimetype: 'image/png'
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(
-          'style',
-          `css?sourceMap!sass?sourceMap&includePaths[]=${path.join(__dirname, 'node_modules')}`
+        use: extractSass.extract(
+          {
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true
+                }
+              }, {
+                loader: 'sass-loader',
+                options: {
+                  includePaths: [
+                    path.join(__dirname, 'node_modules')
+                  ],
+                  sourceMap: true
+                }
+              }
+            ],
+            fallback: 'style-loader'
+          }
         )
       }
     ]
   },
 
   plugins: [
-    new ExtractTextPlugin('stylesheets/style.css')
+    extractSass
   ]
 }
